@@ -8,8 +8,8 @@
 
 namespace Timr\BBCode;
 
-use Genert\BBCode\Parser\BBCodeParser;
-use Genert\BBCode\Parser\HTMLParser;
+use Timr\BBCode\Parser\BBCodeParser;
+use Timr\BBCode\Parser\HTMLParser;
 
 final class BBCode
 {
