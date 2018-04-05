@@ -1,6 +1,6 @@
 <?php
 
-namespace Genert\BBCode;
+namespace Timr\BBCode;
 
 use Illuminate\Support\ServiceProvider;
 

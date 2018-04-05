@@ -7,7 +7,7 @@
  */
 
 use PHPUnit\Framework\TestCase;
-use Genert\BBCode\BBCode;
+use Timr\BBCode\BBCode;
 
 class ParserTest extends TestCase
 {

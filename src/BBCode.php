@@ -6,7 +6,7 @@
  * Time: 12:04
  */
 
-namespace Genert\BBCode;
+namespace Timr\BBCode;
 
 use Genert\BBCode\Parser\BBCodeParser;
 use Genert\BBCode\Parser\HTMLParser;
@@ -58,6 +58,13 @@ final class BBCode
     public function addParser(string $name, string $pattern, string $replace, string $content)
     {
         $this->bbCodeParser->addParser($name, $pattern, $replace, $content);
+
+        return $this;
+    }
+
+    public function addCallbackParser(string $name, string $pattern, callable $callback, string $content)
+    {
+        $this->bbCodeParser->addCallbackParser($name, $pattern, $callback, $content);
 
         return $this;
     }

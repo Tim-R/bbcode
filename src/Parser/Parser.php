@@ -6,7 +6,7 @@
  * Time: 12:16
  */
 
-namespace Genert\BBCode\Parser;
+namespace Timr\BBCode\Parser;
 
 class Parser
 {
@@ -22,6 +22,15 @@ class Parser
     {
         while (preg_match($pattern, $source)) {
             $source = preg_replace($pattern, $replace, $source);
+        }
+
+        return $source;
+    }
+
+    protected function searchAndReplaceCallback(string $pattern, callable $callback, string $source): string
+    {
+        while (preg_match($pattern, $source)) {
+            $source = preg_replace_callback($pattern, $callback, $source);
         }
 
         return $source;
@@ -48,9 +57,20 @@ class Parser
     public function addParser(string $name, string $pattern, string $replace, string $content)
     {
         $this->parsers[$name] = [
+            'type'    => 'normal',
             'pattern' => $pattern,
             'replace' => $replace,
             'content' => $content,
+        ];
+    }
+
+    public function addCallbackParser(string $name, string $pattern, callable $callback, string $content)
+    {
+        $this->parsers[$name] = [
+            'type'    => 'callback',
+            'pattern' => $pattern,
+            'callback' => $callback,
+            'content' => $content
         ];
     }
 }
