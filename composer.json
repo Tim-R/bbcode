@@ -1,5 +1,5 @@
 {
-    "name": "genert/bbcode",
+    "name": "timr/bbcode",
     "description": "BBCode parser from or to HTML.",
     "keywords": ["bbcode", "parser", "laravel", "psr-1", "psr-2", "psr-4"],
     "type": "library",
@@ -9,6 +9,10 @@
             "name": "Genert Org",
             "email": "hi@genert.org",
             "homepage": "http://genert.org"
+        },
+        {
+            "name": "Tim Roden",
+            "email": "tim@laartcc.org"
         }
     ],
     "autoload": {
@@ -17,7 +21,7 @@
         }
     },
     "support": {
-        "issues": "https://github.com/Genert/bbcode/issues"
+        "issues": "https://github.com/Tim-R/bbcode/issues"
     },
     "minimum-stability": "stable",
     "require": {},
